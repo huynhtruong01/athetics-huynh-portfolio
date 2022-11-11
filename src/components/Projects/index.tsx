@@ -110,7 +110,9 @@ export function Projects(props: ProjectsProps) {
                     viewport={{ once: true }}
                     variants={textVariants}
                 >
-                    <h3 className="text-[42px] font-bold text-[#393E46]">Projects</h3>
+                    <h3 className="text-[42px] font-bold text-[#393E46] dark:text-[#D6E4E5]">
+                        Projects
+                    </h3>
                     <p className="text-sm text-gray-500">Most recent work</p>
                 </motion.div>
                 <div className="project__main w-[90%] m-auto">

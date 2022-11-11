@@ -18,7 +18,9 @@ export function Skill(props: SkillProps) {
                     viewport={{ once: true }}
                     variants={textVariants}
                 >
-                    <h3 className="text-[42px] font-bold text-[#393E46]">Skill</h3>
+                    <h3 className="text-[42px] font-bold text-[#393E46] dark:text-[#D6E4E5]">
+                        Skill
+                    </h3>
                     <p className="text-sm text-gray-500">My Technical level</p>
                 </motion.div>
                 <div className="skill__main">

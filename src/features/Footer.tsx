@@ -56,7 +56,9 @@ export function Footer(props: FooterProps) {
                         window.scrollTo(0, 0)
                     }}
                 >
-                    <h2 className="text-2xl font-bold text-gray-800">Athetics</h2>
+                    <h2 className="text-2xl font-bold text-gray-800 dark:text-[#D6E4E5]">
+                        Athetics
+                    </h2>
                 </div>
                 <div className="footer__main">
                     <nav className="mb-4">
@@ -65,7 +67,7 @@ export function Footer(props: FooterProps) {
                                 <li className="footer__nav--item">
                                     <a
                                         href={nav.link}
-                                        className="text-gray-800 font-medium"
+                                        className="text-gray-800 font-medium dark:text-white"
                                     >
                                         {nav.name}
                                     </a>
@@ -85,11 +87,13 @@ export function Footer(props: FooterProps) {
                             )
                         })}
                     </div> */}
-                    <p className="text-gray-800 mb-2">
+                    <p className="text-gray-800 mb-2 dark:text-white">
                         Designed and made 😊 by{' '}
-                        <span className="font-bold">Athetics Huynh</span>
+                        <span className="font-bold dark:text-[#D6E4E5]">
+                            Athetics Huynh
+                        </span>
                     </p>
-                    <p className="text-gray-800 font-semibold">@2022</p>
+                    <p className="text-gray-800 font-semibold dark:text-white">@2022</p>
                 </div>
             </motion.div>
         </footer>

@@ -5,11 +5,11 @@ export interface ButtonScrollDownProps {}
 
 export function ButtonScrollDown(props: ButtonScrollDownProps) {
     return (
-        <div className="flex justify-center items-center p-8">
+        <div className="flex justify-center items-center px-8">
             <a href="#about">
-                <button className="flex items-center gap-2">
+                <button className="flex items-center gap-2 text-gray-800 dark:text-white">
                     <BsMouse className="text-3xl" />
-                    <span className="text-gray-800 font-semibold text-sm flex items-center">
+                    <span className=" font-semibold text-sm flex items-center dark:text-white">
                         Scroll Down <BsArrowDown />
                     </span>
                 </button>

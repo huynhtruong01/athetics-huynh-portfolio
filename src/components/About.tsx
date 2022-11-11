@@ -6,7 +6,7 @@ export interface AboutProps {}
 
 export function About(props: AboutProps) {
     return (
-        <motion.section id="about" className="w-full bg-white">
+        <motion.section id="about" className="w-full bg-white dark:bg-[#3B3B3B]">
             <motion.div
                 className="container m-auto py-12 pb-16"
                 initial="offscreen"
@@ -15,7 +15,9 @@ export function About(props: AboutProps) {
                 variants={textVariants}
             >
                 <div className="about__title text-center mb-6">
-                    <h3 className="text-[42px] font-bold text-[#393E46]">About</h3>
+                    <h3 className="text-[42px] font-bold text-[#393E46] dark:text-[#D6E4E5]">
+                        About
+                    </h3>
                     <p className="text-sm text-gray-500">My Introduction</p>
                 </div>
                 <div className="about__main w-full flex justify-center items-center gap-10 py-6">
@@ -23,7 +25,7 @@ export function About(props: AboutProps) {
                         <img src={avatar} alt="Athetics Huynh" />
                     </div>
                     <div className="about__content w-[65%]">
-                        <p className="font-semibold text-[#393E46]">
+                        <p className="font-semibold text-[#393E46] dark:text-white">
                             I’m an international student from Vietnam who started
                             programming back in 2020 and turned it into a hobby.
                             <br />
