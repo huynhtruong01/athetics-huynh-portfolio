@@ -1,5 +1,6 @@
-import * as React from 'react'
+import { motion } from 'framer-motion'
 import { BsFillPatchCheckFill } from 'react-icons/bs'
+import { boxVariants } from '../../../motion'
 
 export interface SkillContentProps {
     title: string
@@ -15,7 +16,13 @@ export function SkillContent({
     frameworkList = [],
 }: SkillContentProps) {
     return (
-        <div className="skill__content w-full text-center p-6 rounded-2xl bg-white">
+        <motion.div
+            className="skill__content w-full text-center p-6 rounded-2xl bg-white"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            variants={boxVariants}
+        >
             <h5 className="text-2xl font-bold text-[#393E46] mb-4">{title}</h5>
             <div className="skill__list">
                 <table>
@@ -66,6 +73,6 @@ export function SkillContent({
                     )}
                 </table>
             </div>
-        </div>
+        </motion.div>
     )
 }

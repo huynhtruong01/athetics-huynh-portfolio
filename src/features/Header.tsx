@@ -22,7 +22,10 @@ export function Header(props: HeaderProps) {
                 <Link
                     to="/"
                     className="font-semibold text-xl text-gray-800"
-                    onClick={() => setActiveLink('')}
+                    onClick={() => {
+                        window.scrollTo(0, 0)
+                        setActiveLink('')
+                    }}
                 >
                     Athetics
                 </Link>
@@ -34,21 +37,21 @@ export function Header(props: HeaderProps) {
                         <ul className="nav-list flex gap-7 mr-12">
                             {['About', 'Skill', 'Projects', 'Contact'].map(
                                 (x: string) => (
-                                    <li
-                                        className={`nav-item py-2.5 px-4 cursor-pointer rounded-3xl hover:bg-[#6B728E] hover:text-white ${
-                                            activeLink === x.toLowerCase()
-                                                ? 'bg-[#404258] hover:bg-[#404258] text-white'
-                                                : ''
-                                        } duration-300 ease-in-out`}
-                                        onClick={() => setActiveLink(x.toLowerCase())}
+                                    <Link
+                                        to={`/${x.toLowerCase()}`}
+                                        className={`font-medium text-sm`}
                                     >
-                                        <Link
-                                            to={`/${x.toLowerCase()}`}
-                                            className={`font-medium text-sm`}
+                                        <li
+                                            className={`nav-item py-2.5 px-4 cursor-pointer rounded-3xl hover:bg-[#6B728E] hover:text-white ${
+                                                activeLink === x.toLowerCase()
+                                                    ? 'bg-[#404258] hover:bg-[#404258] text-white'
+                                                    : ''
+                                            } duration-300 ease-in-out`}
+                                            onClick={() => setActiveLink(x.toLowerCase())}
                                         >
                                             {x}
-                                        </Link>
-                                    </li>
+                                        </li>
+                                    </Link>
                                 )
                             )}
                         </ul>

@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { textVariants } from '../../motion'
 import { SkillAll, SkillBackend, SkillDatabase, SkillFrontend, SkillOther } from './pages'
 
 export interface SkillProps {}
@@ -9,10 +11,16 @@ export function Skill(props: SkillProps) {
     return (
         <section id="skill" className="w-full">
             <div className="container m-auto pt-12 pb-16">
-                <div className="skill__title text-center mb-10">
+                <motion.div
+                    className="skill__title text-center mb-10"
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true }}
+                    variants={textVariants}
+                >
                     <h3 className="text-[42px] font-bold text-[#393E46]">Skill</h3>
                     <p className="text-sm text-gray-500">My Technical level</p>
-                </div>
+                </motion.div>
                 <div className="skill__main">
                     <div className="skill__tap--list flex justify-center gap-4 mb-8">
                         {['All', 'Front End', 'Back End', 'Database', 'Other'].map(

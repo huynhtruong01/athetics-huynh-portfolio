@@ -1,12 +1,19 @@
-import * as React from 'react'
+import { motion } from 'framer-motion'
 import avatar from '../assets/images/bg-human.jpg'
+import { textVariants } from '../motion'
 
 export interface AboutProps {}
 
 export function About(props: AboutProps) {
     return (
-        <section id="about" className="w-full bg-white">
-            <div className="container m-auto py-12 pb-16">
+        <motion.section id="about" className="w-full bg-white">
+            <motion.div
+                className="container m-auto py-12 pb-16"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true }}
+                variants={textVariants}
+            >
                 <div className="about__title text-center mb-6">
                     <h3 className="text-[42px] font-bold text-[#393E46]">About</h3>
                     <p className="text-sm text-gray-500">My Introduction</p>
@@ -32,7 +39,7 @@ export function About(props: AboutProps) {
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 }

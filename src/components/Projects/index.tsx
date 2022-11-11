@@ -1,8 +1,9 @@
-import * as React from 'react'
+import { motion } from 'framer-motion'
 import { FaNodeJs, FaSass } from 'react-icons/fa'
 import { GrReactjs } from 'react-icons/gr'
 import { SiFramer, SiMongodb, SiSocketdotio } from 'react-icons/si'
 import { ProjectData } from '../../models'
+import { textVariants } from '../../motion'
 import { ProjectList } from './components'
 
 export interface ProjectsProps {}
@@ -102,10 +103,16 @@ export function Projects(props: ProjectsProps) {
     return (
         <section id="projects" className="w-full">
             <div className="container m-auto py-12 pb-16">
-                <div className="project__title text-center mb-10">
+                <motion.div
+                    className="project__title text-center mb-10"
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true }}
+                    variants={textVariants}
+                >
                     <h3 className="text-[42px] font-bold text-[#393E46]">Projects</h3>
                     <p className="text-sm text-gray-500">Most recent work</p>
-                </div>
+                </motion.div>
                 <div className="project__main w-[90%] m-auto">
                     <ProjectList projectList={projectList} />
                 </div>

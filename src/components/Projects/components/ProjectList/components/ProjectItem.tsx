@@ -1,14 +1,24 @@
+import { motion } from 'framer-motion'
 import { IconType } from 'react-icons'
-import { Link } from 'react-router-dom'
 import { LanguageProjectData, ProjectData } from '../../../../../models'
+import { boxVariants } from '../../../../../motion'
 
 export interface ProjectItemProps {
     project: ProjectData
+    index: number
 }
 
-export function ProjectItem({ project }: ProjectItemProps) {
+export function ProjectItem({ project, index }: ProjectItemProps) {
     return (
-        <div className="project__item w-full rounded-xl overflow-hidden hover:scale-105 duration-300 ease-in-out">
+        <motion.div
+            className="project__item w-full rounded-xl overflow-hidden"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            variants={boxVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 1 }}
+        >
             <a href={project.link} target="_blank">
                 <div className="project__item--img h-52">
                     <img src={project.img} alt={project.title} />
@@ -33,6 +43,6 @@ export function ProjectItem({ project }: ProjectItemProps) {
                     </p>
                 </div>
             </a>
-        </div>
+        </motion.div>
     )
 }

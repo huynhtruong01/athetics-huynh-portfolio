@@ -1,15 +1,25 @@
+import { motion } from 'framer-motion'
 import { MdWavingHand } from 'react-icons/md'
 import avatar from '../assets/images/bg-human.jpg'
+import { imgRightVariants, textVariants } from '../motion'
 import { ButtonScrollDown } from './common'
 
 export interface OverviewProps {}
 
 export function Overview(props: OverviewProps) {
     return (
-        <section id="overview" className="w-full h-[calc(100vh_-_68px)] py-10">
+        <section
+            id="overview"
+            className="w-full h-[calc(100vh_-_68px)] py-10 overflow-hidden"
+        >
             <div className="container m-auto h-full px-4 relative">
                 <div className="overview__main flex items-center justify-center gap-10">
-                    <div className="overview__content flex-1">
+                    <motion.div
+                        className="overview__content flex-1"
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        variants={textVariants}
+                    >
                         <h1 className="overview__title text-5xl font-bold text-gray-800 leading-15 mb-3">
                             Hi <MdWavingHand className="inline-block text-yellow-400" />
                             <br />
@@ -33,12 +43,17 @@ export function Overview(props: OverviewProps) {
                                 My resume
                             </button>
                         </a>
-                    </div>
-                    <div className="overview__img flex-1">
+                    </motion.div>
+                    <motion.div
+                        className="overview__img flex-1"
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        variants={imgRightVariants}
+                    >
                         <div className="w-[80%] rounded-xl overflow-hidden m-auto">
                             <img src={avatar} alt="Athetics Huynh" />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="absolute bottom-0 w-full">
                     <ButtonScrollDown />
