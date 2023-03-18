@@ -18,13 +18,13 @@ function App() {
     }, [])
 
     return (
-        <div className="bg-[#EFF5F5] dark:bg-[#252525]">
+        <div className="bg-[#EFF5F5] dark:bg-[#252525] flex flex-col min-h-screen">
             <Header theme={theme} setTheme={setTheme} />
-            <main id="main" className="mt-[68px]">
+            <main id="main" className="mt-[68px] flex-1">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/skill" element={<Skill />} />
+                    <Route path="/skills" element={<Skill />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>

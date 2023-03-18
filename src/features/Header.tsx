@@ -46,7 +46,7 @@ export function Header({ theme, setTheme }: HeaderProps) {
                     </button>
                     <nav className="header__nav flex items-center">
                         <ul className="nav-list flex gap-7 mr-12">
-                            {['About', 'Skill', 'Projects', 'Contact'].map(
+                            {['About', 'Skills', 'Projects', 'Contact'].map(
                                 (x: string) => (
                                     <Link
                                         to={`/${x.toLowerCase()}`}
