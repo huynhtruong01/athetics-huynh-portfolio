@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { MdWavingHand } from 'react-icons/md'
-import avatar from '../assets/images/bg-human.jpg'
+import avatar from '../assets/images/me.jpg'
 import { imgRightVariants, textVariants } from '../motion'
 import { ButtonScrollDown } from './common'
 
@@ -12,23 +12,23 @@ export function Overview(props: OverviewProps) {
             id="overview"
             className="w-full h-[calc(100vh_-_68px)] py-10 pb-6 overflow-hidden"
         >
-            <div className="container m-auto h-full px-4 relative">
-                <div className="overview__main h-full flex items-center justify-center gap-10">
+            <div className="m-auto h-full relative">
+                <div className="h-full flex items-center justify-center gap-4">
                     <motion.div
-                        className="overview__content flex-1"
+                        className="w-1/2 ml-10"
                         initial="offscreen"
                         whileInView="onscreen"
                         variants={textVariants}
                     >
-                        <h1 className="overview__title text-5xl font-bold text-gray-800 leading-15 mb-3 dark:text-white">
+                        <h1 className="text-5xl font-bold text-gray-800 leading-15 mb-3 dark:text-white">
                             Hi <MdWavingHand className="inline-block text-yellow-400" />
                             <br />
-                            I'm Athetics Huynh
+                            I'm Huynh Phuoc Truong
                         </h1>
-                        <p className="overview__detail text-gray-800 mb-6 w-[500px] dark:text-white">
+                        <p className="text-gray-800 mb-6 w-[500px] dark:text-white">
                             I'm{' '}
                             <span className="text-[#3F3B6C] font-bold dark:text-[#D6E4E5]">
-                                Fullstack Developer
+                                Front End Developer
                             </span>
                             , I'm come from Vietnam. I'm very passionate and dedicated to
                             my work.
@@ -45,12 +45,12 @@ export function Overview(props: OverviewProps) {
                         </a>
                     </motion.div>
                     <motion.div
-                        className="overview__img flex-1"
+                        className="w-1/2"
                         initial="offscreen"
                         whileInView="onscreen"
                         variants={imgRightVariants}
                     >
-                        <div className="w-[80%] rounded-xl overflow-hidden m-auto">
+                        <div className="w-[70%] rounded-xl overflow-hidden m-auto">
                             <img src={avatar} alt="Athetics Huynh" />
                         </div>
                     </motion.div>

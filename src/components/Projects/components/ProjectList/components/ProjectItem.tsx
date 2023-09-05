@@ -5,13 +5,12 @@ import { boxVariants } from '../../../../../motion'
 
 export interface ProjectItemProps {
     project: ProjectData
-    index: number
 }
 
-export function ProjectItem({ project, index }: ProjectItemProps) {
+export function ProjectItem({ project }: ProjectItemProps) {
     return (
         <motion.div
-            className="project__item w-full rounded-xl overflow-hidden"
+            className="project__item w-full rounded-xl overflow-hidden col-span-4 h-full bg-white"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true }}
@@ -28,17 +27,23 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
                         {project.title}
                     </h4>
                     <div className="project__item--language-list flex flex-wrap items-center gap-2 my-3">
-                        {project.languageList.map((language: LanguageProjectData) => {
-                            const Icon: IconType = language.icon
-                            return (
-                                <span className="flex items-center text-sm gap-1 text-gray-800 font-semibold py-1.5 px-3.5 bg-[#BAD1C2] rounded">
-                                    <Icon />
-                                    {language.name}
-                                </span>
-                            )
-                        })}
+                        {project.languageList.map(
+                            (language: LanguageProjectData, idx: number) => {
+                                const Icon: IconType = language.icon
+
+                                return (
+                                    <span
+                                        key={`${language.name} ${idx}`}
+                                        className="flex items-center text-sm gap-1 text-gray-800 font-semibold py-1.5 px-3.5 bg-[#BAD1C2] rounded"
+                                    >
+                                        <Icon />
+                                        {language.name}
+                                    </span>
+                                )
+                            }
+                        )}
                     </div>
-                    <p className="project__item--detail pb-10 text-gray-800">
+                    <p className="project__item--detail pt-2 text-gray-800">
                         {project.detail}
                     </p>
                 </div>

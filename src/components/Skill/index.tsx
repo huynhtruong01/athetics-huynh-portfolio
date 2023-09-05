@@ -10,7 +10,7 @@ export function Skill(props: SkillProps) {
 
     return (
         <section id="skill" className="w-full">
-            <div className="container m-auto pt-12 pb-16">
+            <div className="m-auto pt-12 pb-16">
                 <motion.div
                     className="skill__title text-center mb-10"
                     initial="offscreen"
@@ -18,8 +18,8 @@ export function Skill(props: SkillProps) {
                     viewport={{ once: true }}
                     variants={textVariants}
                 >
-                    <h3 className="text-[42px] font-bold text-[#393E46] dark:text-[#D6E4E5]">
-                        Skill
+                    <h3 className="text-[42px] font-bold text-darkLight dark:text-light">
+                        Skills
                     </h3>
                     <p className="text-sm text-gray-500">My Technical level</p>
                 </motion.div>
@@ -28,10 +28,11 @@ export function Skill(props: SkillProps) {
                         {['All', 'Front End', 'Back End', 'Database', 'Other'].map(
                             (tab: string) => (
                                 <button
+                                    key={tab}
                                     className={`py-2.5 px-4 rounded-3xl font-semibold ${
                                         active === tab.toLowerCase()
-                                            ? 'bg-[#393E46] text-white hover:bg-[#393E46]'
-                                            : 'text-[#393E46] hover:text-white hover:bg-[#393E46B3]'
+                                            ? 'bg-darkLight text-light hover:bg-darkLight'
+                                            : 'text-darkLight hover:text-light hover:bg-darkLight'
                                     } duration-300 ease-in-out`}
                                     onClick={() => setActive(tab.toLowerCase())}
                                 >

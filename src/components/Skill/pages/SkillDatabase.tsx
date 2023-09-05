@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { SkillContent } from '../components'
 
 export interface SkillDatabaseProps {}

@@ -1,9 +1,8 @@
-import * as React from 'react'
 import { SkillContent } from '../components'
 
 export interface SkillOtherProps {}
 
-export function SkillOther(props: SkillOtherProps) {
+export function SkillOther() {
     return (
         <div className="w-full grid justify-center gap-4 flex-wrap">
             <div>

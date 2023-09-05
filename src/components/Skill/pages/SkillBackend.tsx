@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { SkillContent } from '../components'
 
 export interface SkillBackendProps {}
@@ -9,8 +8,8 @@ export function SkillBackend(props: SkillBackendProps) {
             <div>
                 <SkillContent
                     title="Back End"
-                    languageList={['JavaScript', 'Python']}
-                    frameworkList={['NodeJS', 'ExpressJS', 'Flask']}
+                    languageList={['JavaScript']}
+                    frameworkList={['NodeJS', 'ExpressJS', 'NestJS']}
                 />
             </div>
         </div>

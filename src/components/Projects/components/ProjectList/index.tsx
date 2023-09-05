@@ -7,9 +7,9 @@ export interface ProjectListProps {
 
 export function ProjectList({ projectList }: ProjectListProps) {
     return (
-        <div className="project__list grid grid-cols-3 gap-10">
-            {projectList.map((project: ProjectData, index: number) => (
-                <ProjectItem project={project} index={index} />
+        <div className="grid grid-cols-12 gap-8">
+            {projectList.map((project: ProjectData, idx: number) => (
+                <ProjectItem key={project.title} project={project} />
             ))}
         </div>
     )

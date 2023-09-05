@@ -1,9 +1,8 @@
-import * as React from 'react'
 import { SkillContent } from '../components'
 
 export interface SkillAllProps {}
 
-export function SkillAll(props: SkillAllProps) {
+export function SkillAll() {
     return (
         <div className="w-full grid grid-cols-3 justify-center gap-6 flex-wrap">
             <div>
@@ -16,14 +15,14 @@ export function SkillAll(props: SkillAllProps) {
                         'JavaScript',
                         'TypeScript',
                     ]}
-                    frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'NextJS']}
+                    frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'VueJS', 'NextJS']}
                 />
             </div>
             <div>
                 <SkillContent
                     title="Back End"
-                    languageList={['JavaScript', 'Python']}
-                    frameworkList={['NodeJS', 'ExpressJS', 'Flask']}
+                    languageList={['JavaScript']}
+                    frameworkList={['NodeJS', 'ExpressJS', 'NestJS']}
                 />
             </div>
             <div>

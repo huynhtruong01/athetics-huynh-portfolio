@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { SkillContent } from '../components'
 
 export interface SkillFrontendProps {}
@@ -16,7 +15,7 @@ export function SkillFrontend(props: SkillFrontendProps) {
                         'JavaScript',
                         'TypeScript',
                     ]}
-                    frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'NextJS']}
+                    frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'VueJS', 'NextJS']}
                 />
             </div>
         </div>
