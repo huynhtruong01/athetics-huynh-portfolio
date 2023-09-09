@@ -50,7 +50,7 @@ export function Overview() {
                         whileInView="onscreen"
                         variants={imgRightVariants}
                     >
-                        <div className="rounded-xl overflow-hidden md:w-[85%] xl:w-[65%]">
+                        <div className="rounded-xl overflow-hidden w-[70%] md:w-[85%] xl:w-[65%]">
                             <img src={avatar} alt="Athetics Huynh" />
                         </div>
                     </motion.div>
