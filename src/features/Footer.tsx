@@ -29,11 +29,11 @@ export function Footer() {
                         </h2>
                     </div>
 
-                    <div className="w-full">
+                    <div className="sm:w-full">
                         <p className="text-gray-800 mb-2 text-center w-full dark:text-light">
                             Designed and made 😊 by{' '}
                             <span
-                                className="font-bold dark:text-light"
+                                className="font-semibold dark:text-light"
                                 onClick={handleScrollTop}
                             >
                                 Athetics Huynh
@@ -41,11 +41,14 @@ export function Footer() {
                         </p>
                     </div>
 
-                    <div className="text-dark dark:text-light md:block sm:hidden">
+                    <div className="text-dark dark:text-light block sm:hidden">
                         Contact{' '}
-                        <Link to={'/'} className="inline-block hover:underline">
+                        <a
+                            href="mailto:huynhphuoctruong01@gmail.com"
+                            className="inline-block hover:underline"
+                        >
                             @me
-                        </Link>
+                        </a>
                     </div>
                 </motion.div>
             </Container>

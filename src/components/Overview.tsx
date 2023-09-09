@@ -30,8 +30,8 @@ export function Overview() {
                             <span className="text-[#3F3B6C] font-semibold dark:text-[#D6E4E5]">
                                 Front End Developer
                             </span>
-                            , I'm come from Vietnam. I'm very passionate and dedicated to
-                            my work.
+                            , I'm come from HCM. I'm very passionate and dedicated to my
+                            work.
                         </p>
 
                         <a

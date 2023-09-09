@@ -1,27 +1,11 @@
 import { motion } from 'framer-motion'
-import { BsGithub } from 'react-icons/bs'
-import { ImFacebook2, ImLinkedin } from 'react-icons/im'
 import { SocialData } from '../models'
 import { textVariants } from '../motion'
+import { socialList } from '../data'
 
 export interface ContactProps {}
 
-export function Contact(props: ContactProps) {
-    const socialList: SocialData[] = [
-        {
-            link: 'https://github.com/huynhtruong01',
-            icon: BsGithub,
-        },
-        {
-            link: 'https://www.facebook.com/roller.jon',
-            icon: ImFacebook2,
-        },
-        {
-            link: 'https://www.linkedin.com/in/huynh-truong-28309422a',
-            icon: ImLinkedin,
-        },
-    ]
-
+export function Contact() {
     return (
         <section className="w-full bg-light dark:bg-darkLight rounded-xl mb-24 mt-16">
             <motion.div
@@ -48,7 +32,7 @@ export function Contact(props: ContactProps) {
                             return (
                                 <span key={`${social.link} ${idx}`}>
                                     <a href={social.link} target="_blank">
-                                        <Icon className="text-2xl text-dark hover:text-black dark:text-white duration-300 ease-in-out" />
+                                        <Icon className="w-6 h-6 text-dark hover:text-black dark:text-white duration-300 ease-in-out" />
                                     </a>
                                 </span>
                             )
