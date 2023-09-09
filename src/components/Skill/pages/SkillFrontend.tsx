@@ -1,23 +1,17 @@
-import { SkillContent } from '../components'
+import { SkillContainer, SkillContent } from '../components'
 
-export interface SkillFrontendProps {}
+export interface SkillFrontendProps {
+    className?: string
+}
 
-export function SkillFrontend(props: SkillFrontendProps) {
+export function SkillFrontend({ className = '' }: SkillFrontendProps) {
     return (
-        <div className="w-full grid justify-center gap-4 flex-wrap">
-            <div>
-                <SkillContent
-                    title="Front End"
-                    languageList={[
-                        'HTML',
-                        'CSS',
-                        'SCSS/SASS',
-                        'JavaScript',
-                        'TypeScript',
-                    ]}
-                    frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'VueJS', 'NextJS']}
-                />
-            </div>
-        </div>
+        <SkillContainer className={className}>
+            <SkillContent
+                title="Front End"
+                languageList={['HTML', 'CSS', 'SCSS/SASS', 'JavaScript', 'TypeScript']}
+                frameworkList={['TailwindCSS', 'MUI', 'ReactJS', 'VueJS', 'NextJS']}
+            />
+        </SkillContainer>
     )
 }

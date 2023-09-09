@@ -17,7 +17,7 @@ export function SkillContent({
 }: SkillContentProps) {
     return (
         <motion.div
-            className="skill__content w-full text-center p-6 rounded-2xl bg-white dark:bg-[#3B3B3B]"
+            className="w-full text-center p-6 rounded-2xl bg-white dark:bg-[#3B3B3B]"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true }}
@@ -26,7 +26,7 @@ export function SkillContent({
             <h5 className="text-2xl font-bold text-[#393E46] mb-4 dark:text-white">
                 {title}
             </h5>
-            <div className="skill__list">
+            <div>
                 <table>
                     <tbody>
                         {toolList.length > 0 && (

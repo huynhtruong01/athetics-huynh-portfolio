@@ -1,17 +1,17 @@
-import { SkillContent } from '../components'
+import { SkillContainer, SkillContent } from '../components'
 
-export interface SkillBackendProps {}
+export interface SkillBackendProps {
+    className?: string
+}
 
-export function SkillBackend(props: SkillBackendProps) {
+export function SkillBackend({ className = '' }: SkillBackendProps) {
     return (
-        <div className="w-full grid justify-center gap-4 flex-wrap">
-            <div>
-                <SkillContent
-                    title="Back End"
-                    languageList={['JavaScript']}
-                    frameworkList={['NodeJS', 'ExpressJS', 'NestJS']}
-                />
-            </div>
-        </div>
+        <SkillContainer className={className}>
+            <SkillContent
+                title="Back End"
+                languageList={['JavaScript']}
+                frameworkList={['NodeJS', 'ExpressJS', 'NestJS']}
+            />
+        </SkillContainer>
     )
 }

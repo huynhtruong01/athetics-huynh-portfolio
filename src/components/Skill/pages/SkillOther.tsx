@@ -1,16 +1,16 @@
-import { SkillContent } from '../components'
+import { SkillContainer, SkillContent } from '../components'
 
-export interface SkillOtherProps {}
+export interface SkillOtherProps {
+    className?: string
+}
 
-export function SkillOther() {
+export function SkillOther({ className = '' }: SkillOtherProps) {
     return (
-        <div className="w-full grid justify-center gap-4 flex-wrap">
-            <div>
-                <SkillContent
-                    title="Other"
-                    toolList={['Git/Github', 'Figma', 'Photoshop (PS)']}
-                />
-            </div>
-        </div>
+        <SkillContainer className={className}>
+            <SkillContent
+                title="Other"
+                toolList={['Git/Github', 'Figma', 'Photoshop (PS)']}
+            />
+        </SkillContainer>
     )
 }

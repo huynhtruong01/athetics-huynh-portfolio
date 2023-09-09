@@ -10,7 +10,7 @@ export interface ProjectItemProps {
 export function ProjectItem({ project }: ProjectItemProps) {
     return (
         <motion.div
-            className="project__item w-full rounded-xl overflow-hidden col-span-4 h-full bg-white"
+            className="w-full rounded-xl overflow-hidden h-full bg-white"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true }}
@@ -19,14 +19,14 @@ export function ProjectItem({ project }: ProjectItemProps) {
             whileTap={{ scale: 1 }}
         >
             <a href={project.link} target="_blank">
-                <div className="project__item--img h-52">
+                <div className="h-52 sm:h-60">
                     <img src={project.img} alt={project.title} />
                 </div>
-                <div className="project__item--content bg-white p-5">
+                <div className="bg-white p-5">
                     <h4 className="text-[20px] font-bold text-gray-800 mt-1 mb-2">
                         {project.title}
                     </h4>
-                    <div className="project__item--language-list flex flex-wrap items-center gap-2 my-3">
+                    <div className="flex flex-wrap items-center gap-2 my-3">
                         {project.languageList.map(
                             (language: LanguageProjectData, idx: number) => {
                                 const Icon: IconType = language.icon
@@ -43,9 +43,7 @@ export function ProjectItem({ project }: ProjectItemProps) {
                             }
                         )}
                     </div>
-                    <p className="project__item--detail pt-2 text-gray-800">
-                        {project.detail}
-                    </p>
+                    <p className="pt-2 text-gray-800">{project.detail}</p>
                 </div>
             </a>
         </motion.div>

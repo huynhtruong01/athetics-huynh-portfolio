@@ -1,26 +1,18 @@
-import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import { About, Contact, Container, Projects, Skill } from './components'
 import { Footer, Header, Home } from './features'
-import { THEME } from './consts'
-import { Theme } from './enums'
+import { useEffect } from 'react'
 
 function App() {
-    const [theme, setTheme] = useState<string>('')
+    const navigate = useNavigate()
 
     useEffect(() => {
-        // const initTheme = JSON.parse(localStorage.getItem(THEME) || '')
-        // if (initTheme === Theme.DARK) {
-        //     document.documentElement.classList.add(Theme.DARK)
-        // } else {
-        //     document.documentElement.classList.remove(Theme.LIGHT)
-        // }
-        // setTheme(initTheme)
-    }, [])
+        window.scrollTo(0, 0)
+    }, [navigate])
 
     return (
         <div className="bg-light dark:bg-dark flex flex-col min-h-screen overflow-hidden">
-            <Header theme={theme} setTheme={setTheme} />
+            <Header />
             <main id="main" className="mt-[68px] flex-1">
                 <Container>
                     <Routes>

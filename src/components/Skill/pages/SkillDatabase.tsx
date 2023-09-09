@@ -1,16 +1,16 @@
-import { SkillContent } from '../components'
+import { SkillContainer, SkillContent } from '../components'
 
-export interface SkillDatabaseProps {}
+export interface SkillDatabaseProps {
+    className?: string
+}
 
-export function SkillDatabase(props: SkillDatabaseProps) {
+export function SkillDatabase({ className = '' }: SkillDatabaseProps) {
     return (
-        <div className="w-full grid justify-center gap-4 flex-wrap">
-            <div>
-                <SkillContent
-                    title="Database"
-                    languageList={['SQL Server', 'MySQL', 'MongoDB']}
-                />
-            </div>
-        </div>
+        <SkillContainer className={className}>
+            <SkillContent
+                title="Database"
+                languageList={['SQL Server', 'MySQL', 'MongoDB']}
+            />
+        </SkillContainer>
     )
 }

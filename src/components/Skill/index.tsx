@@ -5,7 +5,7 @@ import { SkillAll, SkillBackend, SkillDatabase, SkillFrontend, SkillOther } from
 
 export interface SkillProps {}
 
-export function Skill(props: SkillProps) {
+export function Skill() {
     const [active, setActive] = useState('all')
 
     return (
@@ -23,8 +23,8 @@ export function Skill(props: SkillProps) {
                     </h3>
                     <p className="text-sm text-gray-500">My Technical level</p>
                 </motion.div>
-                <div className="skill__main">
-                    <div className="skill__tap--list flex justify-center gap-4 mb-8">
+                <div>
+                    <div className="flex justify-center flex-wrap gap-4 mb-8">
                         {['All', 'Front End', 'Back End', 'Database', 'Other'].map(
                             (tab: string) => (
                                 <button
@@ -41,12 +41,18 @@ export function Skill(props: SkillProps) {
                             )
                         )}
                     </div>
-                    <div className="skill__content--list w-[90%] m-auto">
+                    <div>
                         {active === 'all' && <SkillAll />}
-                        {active === 'front end' && <SkillFrontend />}
-                        {active === 'back end' && <SkillBackend />}
-                        {active === 'database' && <SkillDatabase />}
-                        {active === 'other' && <SkillOther />}
+                        {active === 'front end' && (
+                            <SkillFrontend className="w-1/2 m-auto" />
+                        )}
+                        {active === 'back end' && (
+                            <SkillBackend className="w-1/2 m-auto" />
+                        )}
+                        {active === 'database' && (
+                            <SkillDatabase className="w-1/2 m-auto" />
+                        )}
+                        {active === 'other' && <SkillOther className="w-1/2 m-auto" />}
                     </div>
                 </div>
             </div>
