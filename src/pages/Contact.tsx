@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { socialList } from '@/data'
-import { SocialData } from '../models'
+import { SocialData } from '@/models'
 import { textVariants } from '@/motion'
 
 export function Contact() {
