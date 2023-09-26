@@ -1,3 +1,3 @@
-export * from './contact'
-export * from './footer'
-export * from './project'
+export * from '@/models/contact'
+export * from '@/models/footer'
+export * from '@/models/project'

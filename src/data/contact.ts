@@ -1,4 +1,4 @@
-import { SocialData } from '@/models'
+import { SocialData } from '../models'
 import { BsGithub } from 'react-icons/bs'
 import { ImFacebook2, ImLinkedin } from 'react-icons/im'
 import { SiGmail } from 'react-icons/si'

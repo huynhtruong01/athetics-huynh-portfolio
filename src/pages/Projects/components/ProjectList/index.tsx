@@ -1,4 +1,4 @@
-import { ProjectData } from '@/models'
+import { ProjectData } from '../../../../models'
 import { ProjectItem } from '@/pages/Projects/components/ProjectList/components'
 
 export interface ProjectListProps {

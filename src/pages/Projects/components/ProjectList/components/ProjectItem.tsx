@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { IconType } from 'react-icons'
-import { LanguageProjectData, ProjectData } from '@/models'
+import { LanguageProjectData, ProjectData } from '../../../../../models'
 import { boxVariants } from '@/motion'
 
 export interface ProjectItemProps {
