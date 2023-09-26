@@ -1,0 +1,6 @@
+export * from '@/pages/About'
+export * from '@/pages/Home'
+export * from '@/pages/Contact'
+export * from '@/pages/Projects'
+export * from '@/pages/Overview'
+export * from '@/pages/Skill'

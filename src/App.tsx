@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import { About, Contact, Container, Projects, Skill } from './components'
-import { Footer, Header, Home } from './features'
+import { About, Contact, Projects, Skill, Home } from '@/pages'
+import { Footer, Header, Container } from '@/components'
 import { useEffect } from 'react'
 
 function App() {

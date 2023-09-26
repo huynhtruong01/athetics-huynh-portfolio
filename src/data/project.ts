@@ -10,7 +10,7 @@ import {
     SiMarkdown,
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
-import { ProjectData } from '../models'
+import { ProjectData } from '@/models'
 
 export const projectList: ProjectData[] = [
     {
@@ -38,7 +38,7 @@ export const projectList: ProjectData[] = [
         link: 'https://github.com/huynhtruong01/github-me',
     },
     {
-        img: 'https://bizweb.dktcdn.net/100/438/408/themes/919724/assets/banner-new-bst-desktop.png?1693888109548',
+        img: 'https://res.cloudinary.com/huynhtruong01/image/upload/v1695723267/banner-new-bst-desktop_shcozl.png',
         title: 'YODY Store Clone',
         languageList: [
             {
@@ -66,7 +66,7 @@ export const projectList: ProjectData[] = [
         link: 'https://github.com/huynhtruong01/yody-app',
     },
     {
-        img: 'https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png',
+        img: 'https://res.cloudinary.com/huynhtruong01/image/upload/v1695723175/6hqmcjaxbgbon8ydw93z_cobymy.png',
         title: 'News IT App',
         languageList: [
             {
@@ -91,6 +91,6 @@ export const projectList: ProjectData[] = [
             },
         ],
         detail: "News IT is a vibrant and inclusive community created by and for developers. It's your go-to platform for everything related to software development, programming, and technology. Whether you're a seasoned pro or just starting your coding journey, Dev.to is the place to connect, learn, and share with like-minded individuals.",
-        link: 'https://github.com/huynhtruong01/yody-app',
+        link: 'https://github.com/huynhtruong01/news-it-dev',
     },
 ]

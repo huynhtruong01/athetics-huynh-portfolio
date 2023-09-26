@@ -1,7 +1,0 @@
-export * from './About'
-export * from './common'
-export * from './Contact'
-export * from './Overview'
-export * from './Projects'
-export * from './ScrollTop'
-export * from './Skill'

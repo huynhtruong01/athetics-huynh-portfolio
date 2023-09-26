@@ -1,0 +1,5 @@
+export * from '@/pages/Skill/pages/SkillAll'
+export * from '@/pages/Skill/pages/SkillBackend'
+export * from '@/pages/Skill/pages/SkillDatabase'
+export * from '@/pages/Skill/pages/SkillFrontend'
+export * from '@/pages/Skill/pages/SkillOther'

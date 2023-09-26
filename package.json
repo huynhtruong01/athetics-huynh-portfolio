@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-app",
+  "name": "athetics-huynh-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,10 +16,12 @@
     "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
+    "@types/node": "^20.7.0",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
+    "path": "^0.12.7",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.3",
     "typescript": "^4.6.4",
